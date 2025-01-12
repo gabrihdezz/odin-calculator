@@ -1,6 +1,14 @@
+let buttonList = document.querySelectorAll(".buttons > div > .digit");
+let displayContent = document.querySelector(".display > p");
 let num1 = 0;
 let num2 = 0;
 let operator = '';
+
+buttonList.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        displayContent.textContent += event.target.textContent;
+    });
+});
 
 function add(a, b) {
     return a + b;
